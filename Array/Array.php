@@ -7,7 +7,15 @@ var_dump($hari);
 
 // Array 2 dimensi /multidimensi
 $Mahasiswa = [
-  ['Humam afif', '15210107', 'Teknik Informatika'],
-  ['Mutia Amanda', '15210108', 'Kedokteran']
+  ['Humam afif ', '15210107 ', 'Teknik Informatika'],
+  ['Mutia Amanda ', '15210108 ', 'Kedokteran']
 ];
 var_dump($Mahasiswa);
+
+
+foreach ($Mahasiswa as $mhs) {
+  for ($i = 0; $i < 3; $i++) {
+    echo $mhs[$i] . " ";
+  }
+  echo "<br>";
+}
