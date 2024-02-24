@@ -1,0 +1,12 @@
+git status
+git add .
+git status
+git commit -m 'Pesan'
+git push 
+
+
+note :
+jika ada masalah karna akun github nyangkut di credential manager 
+
+problem solving :
+cari credential manager -> windows credential -> generic credential -> hapus akun github terkait -> lalu coba untuk push ulang
