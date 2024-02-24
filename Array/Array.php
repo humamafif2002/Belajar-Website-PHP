@@ -14,6 +14,7 @@ var_dump($Mahasiswa);
 
 
 foreach ($Mahasiswa as $mhs) {
+  // print sesuai indeks,jika sudah habis maka keluar ke array kedua
   for ($i = 0; $i < 3; $i++) {
     echo $mhs[$i] . " ";
   }
