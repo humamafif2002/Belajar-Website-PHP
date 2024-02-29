@@ -103,8 +103,6 @@ class Produk
     }
   }
 
-
-
   public function getLabel()
   {
     return "$this->penulis , $this->penerbit";
@@ -126,6 +124,12 @@ class CetakInfoProduk
   }
 }
 
+
+
+
+
+
+
 class Komik extends Produk
 {
 
@@ -142,6 +146,12 @@ class Komik extends Produk
     return $str = "Komik : " . parent::getInfoLengkap() .  "{$this->jmlhalaman} halaman ";
   }
 }
+
+
+
+
+
+
 class Game extends Produk
 {
 
