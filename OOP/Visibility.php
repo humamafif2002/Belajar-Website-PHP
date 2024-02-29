@@ -27,10 +27,9 @@ class Produk
       // maka kembalikan nilai harga normal
       return $this->harga;
     } else {
-      // namun jika diskon tidak null diskon = harga * diskon / 100
-      $diskon = $this->harga * $this->diskon / 100;
-      // kembalikan harga = harga - diskon;
-      return $this->harga - $diskon;
+      // namun jika diskon tidak null 
+      // kembalikan harga - (harga * diskon /100);
+      return $this->harga - ($this->harga * $this->diskon / 100);
     }
   }
 
