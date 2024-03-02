@@ -20,8 +20,15 @@ echo UMUR;
 
 echo "<br>";
 
-class Contoh {
+class Contoh
+{
   const Nilai = 29;
 }
 
 echo Contoh::Nilai;
+
+// contoh magic constant
+echo "<br>";
+echo __LINE__; //mengartikan sedang berada pada baris berapa kita berada
+echo "<br>";
+echo __FILE__; //mengartikan dimana letak file yang sedang kita eksekusi
