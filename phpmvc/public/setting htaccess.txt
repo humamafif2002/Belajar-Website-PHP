@@ -1,0 +1,25 @@
+REGEX (REGULER EXPRESION)
+
+
+^ = kita akan membaca apapun yang ditulis di url mulai dari awal (public)
+(.*) = ambil semua karakter
+$ = selesai
+index.php?url = kita buat agar kita arahkan ke file index yang mengirimkan url
+url=$1 =  $1 adalah placeholder atau tempat dituliskannya informasi diatas
+[L] = Jika ada rule yang sudah terpenuhi jangan jalankan rule lain setelah ini
+
+RewriteRule adalah
+
+^(.*)$ index.php?url=$1 [L]
+
+^ baca semua karakter diurl setelah public (http://localhost/Website%20PHP/Belajar-Website-PHP/phpmvc/public/TARGET)
+(.*)$ ambil semua karakter sampai selesai
+index.php?url= arahkan ke index.php & kirimkan $_GET[url = dengan isi $1 (^(.*)$)]
+[L] berhenti ketika kondisi terpenuhi
+
+
+RewriteCond %{REQUEST_FILENAME} !-d (FOLDER)
+RewriteCond %{REQUEST_FILENAME} !-f (FILE)
+
+agar nama folder dan file tidak ditulis kedalam url
+

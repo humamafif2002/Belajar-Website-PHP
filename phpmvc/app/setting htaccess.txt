@@ -1,0 +1,4 @@
+Options -Indexes => ini artinya : Jika user membuka folder app dan folder didalamnya,
+                                  selama folder itu tidak ada file index,maka jangan tampilkan isi foldernya
+                                
+Tidak boleh ada text lainya atau komentar pada file .htaccess

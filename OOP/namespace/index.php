@@ -13,5 +13,5 @@ use App\Produk\User as ProdukUser;
 use App\Service\User as ServiceUser;
 
 echo "<br>";
-// ini adalah contoh memanggil menggunakan aliasnya
+// ini adalah contoh menginstansiasi namespace menggunakan nama aliasnya
 new ProdukUser();
