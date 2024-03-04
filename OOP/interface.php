@@ -4,7 +4,7 @@
 // interface tidak boleh ada properti,dan hanya template method saja
 // wajib visibilitynya public
 // contoh interface
-interface getInfoLengkap
+interface GetInfoLengkap
 {
   public function getInfoLengkap();
 }
@@ -149,7 +149,7 @@ class CetakInfoProduk
 
 
 // tinggal buat implements nama interfacenya
-class Komik extends Produk implements getInfoLengkap
+class Komik extends Produk implements GetInfoLengkap
 {
 
   public $jmlhalaman;
@@ -177,7 +177,7 @@ class Komik extends Produk implements getInfoLengkap
 
 
 // tinggal buat implements nama interfacenya
-class Game extends Produk
+class Game extends Produk implements GetInfoLengkap
 {
 
   public $waktumain;
