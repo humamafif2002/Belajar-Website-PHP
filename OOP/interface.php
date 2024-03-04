@@ -119,7 +119,6 @@ abstract class Produk
   }
 
   // method yang wajib ada pada kelas turunannya
-
   abstract public function getInfo();
 }
 
