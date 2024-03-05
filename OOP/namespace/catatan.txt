@@ -1,0 +1,30 @@
+Mari kita bahas langkah demi langkah:
+
+Pemanggilan Kelas: Ketika Anda menggunakan new App\Service\User();, itu berarti Anda membuat objek dari kelas User yang berada dalam namespace App\Service.
+
+Namespace dan Struktur Direktori: PHP akan menggunakan informasi namespace untuk mengetahui di mana kelas User berada dalam struktur direktori proyek. Misalnya, dengan namespace App\Service, PHP akan mencari kelas User di dalam folder Service yang berada dalam folder App di dalam direktori proyek.
+
+Konvensi Nama File: Biasanya, dalam praktiknya, kelas User akan disimpan dalam file dengan nama User.php. Jadi, dalam contoh Anda, file yang berisi kelas User akan berada di lokasi seperti App/Service/User.php.
+
+Autoload dan Pemuatan Kelas: Fungsi autoload yang didaftarkan dengan spl_autoload_register() akan mengambil nama kelas yang diminta, seperti App\Service\User, dan mencoba mencari dan memuat file kelas yang sesuai berdasarkan konvensi nama file dan struktur direktori yang telah diatur.
+
+Jadi, meskipun PHP tidak secara otomatis mengonversi namespace menjadi path file, informasi yang diberikan oleh namespace membantu PHP menemukan lokasi file kelas yang benar saat melakukan autoload.
+
+
+
+----------------
+Pemanggilan Kelas: Pada skrip utama (biasanya index.php atau init.php), Anda membuat objek kelas User dari namespace App\Service dengan menggunakan new App\Service\User();.
+
+Panggilan Fungsi Autoload: Ketika PHP mengeksekusi baris kode tersebut, dan karena kelas User belum dimuat, PHP akan mencari fungsi autoload yang telah Anda daftarkan sebelumnya. Fungsi autoload tersebut biasanya terdaftar di file init.php atau file lain yang dipanggil sebelumnya.
+
+Autoload dan Pemuatan Kelas: Fungsi autoload yang telah Anda daftarkan akan dijalankan. Fungsi ini akan menerima nama kelas yang diminta sebagai argumen. Dalam contoh ini, nama kelas yang diminta adalah App\Service\User.
+
+Pencarian File Kelas: Fungsi autoload akan mencoba menemukan lokasi file yang sesuai dengan nama kelas yang diminta. Dalam contoh ini, autoload akan mencari file yang sesuai dengan struktur namespace dan konvensi nama file. Misalnya, autoload akan mencari file User.php di dalam direktori App/Service/.
+
+Pemuatan File Kelas: Setelah lokasi file kelas ditemukan, autoload akan memuat file tersebut ke dalam skrip PHP. Dengan demikian, kelas User dari namespace App\Service menjadi tersedia untuk digunakan dalam skrip Anda.
+
+Jadi, inilah bagaimana spl_autoload_register() bekerja dalam proses autoload kelas yang diminta. Autoload akan memproses nama kelas yang diminta, mencari dan memuat file kelas yang sesuai, dan membuat kelas tersebut tersedia untuk digunakan dalam skrip PHP Anda.
+
+
+
+
