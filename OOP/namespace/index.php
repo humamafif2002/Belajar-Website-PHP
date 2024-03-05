@@ -9,11 +9,12 @@ require_once "App/init.php";
 
 
 // atau dijadikan alias kemudian instansiasi menggunakan as(aliasnya)
-// use App\Produk\User as ProdukUser;
-// use App\Service\User as ServiceUser;
+use App\Produk\User as ProdukUser;
+use App\Service\User as ServiceUser;
 
 echo "<br>";
 // ini adalah contoh menginstansiasi namespace menggunakan nama aliasnya
-// new ProdukUser();
+new ProdukUser();
+echo "<br>";
 $Battlefield = new Game("Battlefield", "Recker", "EA GAMES", 100000, 50);
-$Battlefield->getInfoLengkap();
+echo $Battlefield->getInfoLengkap();
