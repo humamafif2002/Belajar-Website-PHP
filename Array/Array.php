@@ -10,6 +10,7 @@ $Mahasiswa = [
   ['Humam afif ', '15210107 ', 'Teknik Informatika'],
   ['Mutia Amanda ', '15210108 ', 'Kedokteran']
 ];
+
 var_dump($Mahasiswa);
 
 
@@ -20,3 +21,19 @@ foreach ($Mahasiswa as $mhs) {
   }
   echo "<br>";
 }
+
+// assosiative array
+//  'key'=> 'value'
+// $person = array(
+//   "name" => "John",
+//   "age" => 30,
+//   "city" => "New York"
+// );
+
+// array multidimensi
+
+// $matrix = array[
+//   array[1, 2, 3],
+//   array[4, 5, 6],
+//   array[7, 8, 9]
+// ];

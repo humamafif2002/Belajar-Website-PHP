@@ -44,7 +44,7 @@ class App
       $this->params = array_values($url);
     }
 
-    var_dump($this->controller, $this->method, $this->params);
+    // var_dump($this->controller, $this->method, $this->params);
     // jalankan controller & method ,serta kirimkan params jika ada
     call_user_func_array([$this->controller, $this->method], $this->params);
   }
