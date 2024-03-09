@@ -37,3 +37,5 @@ foreach ($Mahasiswa as $mhs) {
 //   array[4, 5, 6],
 //   array[7, 8, 9]
 // ];
+
+// absen
