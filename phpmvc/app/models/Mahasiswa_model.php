@@ -13,7 +13,7 @@ class Mahasiswa_model
     // data source name
     $dsn = 'mysql:host=localhost;dbname=phpmvc';
     try {
-      // pdo adalah handler pdo
+      // pdo adalah handler dbh
       // datasource name 'username','password'
       $this->dbh = new PDO($dsn, 'root', '');
     } //jika error tangkap pesannya masukan kedalam $e
