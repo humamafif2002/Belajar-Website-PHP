@@ -23,7 +23,7 @@
 
                 <div class="form-group">
                   <select class="form-select form-select-sm" aria-label="Small select example" id="jurusan" name="jurusan">
-                    <option selected disabled>Pilih jurusan</option>
+                    <option selected disabled hidden>Pilih jurusan</option>
                     <option value="Teknik Mesin">Teknik Mesin</option>
                     <option value="Teknik Pangan">Teknik Pangan</option>
                     <option value="Teknik Informatika">Teknik Informatika</option>
