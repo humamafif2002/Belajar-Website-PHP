@@ -8,6 +8,7 @@
             </div>
             <div class="modal-body">
               <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="post">
+                <input type="hidden" name="id" id="id">
                 <div class="mb-3">
                   <label for="nama" class="form-label">Nama</label>
                   <input type="text" class="form-control" id="nama" placeholder="Nama Mahasiswa" name="nama">
@@ -64,7 +65,7 @@
               <?php foreach ($data['Mahasiswa'] as $mhs) : ?>
                 <li class="list-group-item "><?= $mhs['nama']; ?>
                   <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge text-bg-danger text-decoration-none float-end ms-2" onclick="return confirm('yakin?');">Hapus</a>
-                  <a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="badge text-bg-warning text-decoration-none float-end ms-2 tampilModalUbah" data-bs-toggle="modal" data-bs-target="#formModal">ubah</a>
+                  <a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="badge text-bg-warning text-decoration-none float-end ms-2 tampilModalUbah" data-bs-toggle="modal" data-bs-target="#formModal" data-id="<?= $mhs['id']; ?>">ubah</a>
                   <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge text-bg-primary text-decoration-none float-end">Detail</a>
 
                 </li>
