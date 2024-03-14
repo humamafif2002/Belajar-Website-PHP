@@ -31,7 +31,7 @@ $(()=>{
   $('.tambahDataMahasiswa').on('click',function(){
     $('#judulModal').html('Tambah Data Mahasiswa');
     $('.modal-footer Button[type=submit]').html('tambah data')
-    $('.modal-body form').attr('action','http://localhost/Website%20PHP/Belajar-Website-PHP/phpmvc/public/tambah')
+    $('.modal-body form').attr('action','http://localhost/Website%20PHP/Belajar-Website-PHP/phpmvc/public/mahasiswa/tambah')
     $('#nama').val('');
     $('#nim').val('');
     $('#email').val('');
