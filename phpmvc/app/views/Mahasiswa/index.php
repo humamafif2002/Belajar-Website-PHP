@@ -55,7 +55,7 @@
           <div class="col-4">
 
             <!-- trigger modal -->
-            <button type="button" class="btn btn-primary mt-3 mb-3" data-bs-toggle="modal" data-bs-target="#formModal">
+            <button type="button" class="btn btn-primary mt-3 mb-3 tambahDataMahasiswa" data-bs-toggle="modal" data-bs-target="#formModal">
               Tambah Mahasiswa
             </button>
 
@@ -64,6 +64,7 @@
               <?php foreach ($data['Mahasiswa'] as $mhs) : ?>
                 <li class="list-group-item "><?= $mhs['nama']; ?>
                   <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge text-bg-danger text-decoration-none float-end ms-2" onclick="return confirm('yakin?');">Hapus</a>
+                  <a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="badge text-bg-warning text-decoration-none float-end ms-2 tampilModalUbah" data-bs-toggle="modal" data-bs-target="#formModal">ubah</a>
                   <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge text-bg-primary text-decoration-none float-end">Detail</a>
 
                 </li>
