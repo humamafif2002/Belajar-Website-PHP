@@ -57,6 +57,7 @@ class Mahasiswa_model
     $this->db->bind('id', $data['id']);
     $this->db->execute();
 
+    // fungsi pada object db yang mengembalikan nilai apakah ada database yang ter ubah 
     return $this->db->rowCount();
   }
 }
