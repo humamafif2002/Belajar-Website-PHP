@@ -71,4 +71,16 @@ class Mahasiswa extends Controller
       exit;
     }
   }
+
+
+  public function cari()
+  {
+    $data['title'] = 'Data Mahasiswa';
+    // cara bacanya panggil method model yang ada pada controller kemudian require model dan instansiasi,selebihnya dikerjakan oleh 
+    //method pada model
+    $data['Mahasiswa'] = $this->model('Mahasiswa_model')->cariDataMahasiswa();
+    $this->view('templates/header', $data);
+    $this->view('Mahasiswa/index', $data);
+    $this->view('templates/footer', $data);
+  }
 }

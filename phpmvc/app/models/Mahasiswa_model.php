@@ -60,4 +60,17 @@ class Mahasiswa_model
     // fungsi pada object db yang mengembalikan nilai apakah ada database yang ter ubah 
     return $this->db->rowCount();
   }
+
+  public function cariDataMahasiswa()
+  {
+    if ($_POST['keyword'] == '') {
+      header('Location:' . BASEURL . '/mahasiswa');
+    } else if (isset($_POST['keyword'])) {
+      $keyword = $_POST['keyword'];
+      $query = "SELECT * FROM {$this->table} WHERE nama LIKE :keyword";
+      $this->db->query($query);
+      $this->db->bind('keyword', "%$keyword%");
+      return $this->db->resultSet();
+    }
+  }
 }
